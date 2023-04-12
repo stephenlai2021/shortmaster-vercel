@@ -1,0 +1,6 @@
+{
+	"runtime": "nodejs18.x",
+	"handler": "..\\..\\..\\..\\My Projects\\Sveltekit1.0\\QuickShort - URL Shortener\\.svelte-kit\\vercel-tmp\\index.js",
+	"launcherType": "Nodejs",
+	"experimentalResponseStreaming": true
+}

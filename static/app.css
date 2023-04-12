@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card {
+  @apply backdrop-blur-lg border rounded-xl p-5 min-w-[350px];
+}
+
+.card-error {
+  @apply backdrop-blur-lg border rounded-xl p-3; 
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  @apply backdrop-blur-lg border rounded-lg w-full py-2 px-3; 
+}
+
+input[type="text"]::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  @apply opacity-80; 
+}
+
+label {
+  @apply text-xs pl-1 mb-1;
+}

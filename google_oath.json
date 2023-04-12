@@ -1,0 +1,18 @@
+{
+  "web": {
+    "client_id": "789866672875-drsueg46k4cs7epg18687so7en8h3dqa.apps.googleusercontent.com",
+    "project_id": "quickshort",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_secret": "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",
+    "redirect_uris": [
+      "http://localhost:5173",
+      "https://itzgmdgndusfvggjclwk.supabase.co/auth/v1/callback"
+    ],
+    "javascript_origins": [
+      "http://localhost:5173",
+      "https://quickshort-url-shortener.vercel.app"
+    ]
+  }
+}
