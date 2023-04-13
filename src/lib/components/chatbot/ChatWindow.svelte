@@ -113,6 +113,28 @@
     };
   }
 
+  const saveApikey = () => {
+    if (!$openaiKey) {
+      toast.push("This field cannot be empty !", {
+        theme: {
+          "--toastBorderRadius": "8px",
+          "--toastBarBackground": "",
+          "--toastBackground": "#8AD8EF",
+          "--toastBtnWidth": "0",
+          "--toastBtnHeight": "0",
+          "--toastBtnContent": " ",
+          "--toastMsgPadding": "0.35rem 1rem",
+          "--toastMinHeight": "3.0rem",
+          "--toastColor": "black",
+          "--toastBtnFont": "14px",
+        },
+      });
+      return
+    } else {
+      popup = false
+    }
+  }
+
   $: console.log("openai key: ", $openaiKey);
 </script>
 
@@ -179,9 +201,10 @@
       />
       <button
         class="bg-primary borde text-[14px] rounded-[0px] px-[10px] w-[30%]"
-        on:click={() => (popup = false)}
+        on:click={saveApikey}
         on:keydown
       >
+        <!-- on:click={() => (popup = false)} -->
         <!-- <span class="borde">{$t("common.")}</span> -->
         <span class="borde">{$t("common.done")}</span>
       </button>
