@@ -59,8 +59,8 @@
       )
       .openPopup();
 
-    url_shortener_clicks.forEach((loc) => {
-    // clickDetails.forEach((loc) => {
+    // url_shortener_clicks.forEach((loc) => {
+    clickDetails.forEach((loc) => {
       leaflet
         .marker([loc.latitude, loc.longitude], { icon: avatarIcon })
         .addTo(map)
