@@ -72,7 +72,7 @@
   <title>ShortMaster</title>
 </svelte:head>
 
-<SvelteToast />
+<!-- <SvelteToast /> -->
 <div
   class="max-w-[1600px] mx-auto relative overflow-auto"
   style:height={$widthLessthan400 && $menuOpen ? "100vh" : "auto"}
