@@ -55,16 +55,16 @@ One thing to mention is that designing an appealing, good-looking User Interface
 
 **Theme Switcher**
 
-users are able to select favorite theme, it applies to the entire application, the selected theme is remembered by the application and is stored in cookie, so when page is refreshed users won't see the flicker, it provies great user experiences thanks to `Sveltekit` powerful server side rendering mechanism. - [https://shortmaster.netlify.app/cEXJBV](https://shortmaster.netlify.app/cEXJBV)
+users are able to select favorite theme, it applies to the entire application, the selected theme is remembered by the application and is stored in cookie, so when page is refreshed users won't see the flicker, it provies great user experiences thanks to `Sveltekit` powerful server side rendering mechanism. - [https://shortmasters.vercel.app/cEXJBV](https://shortmasters.vercel.app/cEXJBV)
 
-<img height="400" src="https://shortmaster.netlify.app/I5W0gv">
+<img height="400" src="https://shortmaster1.vercel.app/I5W0gv">
 
 **Internationalization**
 
 Multiple languages supports is essential for a successful web application, being able to serve people around the world is the key to success, therefore, adding `i18n` to the app is crucial. A `sveltekit-i18n` package is leveraged to make this feature come true. - [sveltekit-i18n](https://www.npmjs.com/package/sveltekit-i18n)
 
 
-<img height="200" src="https://shortmaster.netlify.app/cMRCJb">
+<img height="200" src="https://shortmaster1.vercel.app/cMRCJb">
 
 
 **User account**
@@ -78,7 +78,7 @@ loggedin user's avatar image will be apperaed on the top right corner, when mous
 
 The advent of `chatGPT` has becoming a phenomonal, it takes chabot to another level, it talks in human manner, understand what we ask, and answer questions beyond our expectations. Therefore an `OpenAI` powered chatbot has become a necessity for a successful app to draw visitors' attention and willing to stay longer on our page. _ShortMaster_ has `OpenAI` powered chatbot built-in, it not only answers questions related to URL shortening, but also other concerns if you would like to just chat with this super AI, all the conversation is stored so that you don't need to restart the conversation all over again once the chat window is closed. - [https://platform.openai.com/overview](https://platform.openai.com/overview)
 
-<img height="400" src="https://shortmaster.netlify.app/xICP5o">
+<img height="400" src="https://shortmaster1.vercel.app/xICP5o">
 
 **Tracking Capability**
 
@@ -113,11 +113,11 @@ All the pages are fully responsive, no matter what size of the page, or what dim
 
 `Tailwindcss` is a utility class library, it let developers never leave html, all the styles can be done within tags, it is considered the most popular CSS library . `Daisyui` is a library on top of Tailwindcss, it is a component library and make developing components fairly easy by simply adding a class name to get a beautify component with minimum styles, for example if we need a button, simply add `class="btn"` to get a basic styled button, if we want to customize the color of the button we simply add `class="btn btn-primary"` to get system define primary color, etc. Daisyui makes building beautiful, good-looking UI pretty easy and offers terrific developer experiences - [daisyui](https://daisyui.com/)
 
-**Vercel / Netlify**
+**Vercel**
 
 Vercel is the platform for frontend developers, providing the speed and reliability innovators need to create at the moment of inspiration, and it is my goto hosting platform, it makes deploying projects build with all sorts of frameworks such as Svelte/Sveltekit, React/Next, Vue/Nuxt, Remix, etc. way so much easy and saved us tons of time, Vercel runs so fast and that provides pleasant and enjoyable user experiences - [Vercel docs](https://vercel.com/docs)
 
-The fastest way to combine your favorite tools and APIs to build the fastest sites, stores, and apps for the web. - [Netlify](https://www.netlify.com/)
+<!-- The fastest way to combine your favorite tools and APIs to build the fastest sites, stores, and apps for the web. - [Netlify](https://www.netlify.com/) -->
 
 ## Routes
 
@@ -242,9 +242,9 @@ A collection of framework-specific Auth utilities for working with Supabase, it 
 
 A SvelteKit adapter that creates a Vercel app. - <a href="https://kit.svelte.dev/docs/adapter-vercel" target="_blank">adapter-vercel</a>
 
-**adapter-netlify**
+<!-- **adapter-netlify**
 
-- A SvelteKit adapter that creates a Netlify app. - <a href="https://kit.svelte.dev/docs/adapter-netlify" target="_blank">adapter-netlify</a>
+- A SvelteKit adapter that creates a Netlify app. - <a href="https://kit.svelte.dev/docs/adapter-netlify" target="_blank">adapter-netlify</a> -->
 
 
 **svelte-toast**
@@ -415,24 +415,23 @@ _Site URL_
 
 - The base URL of your website, for instance
 ```
+development mode
 http://localhost:5173
 
+production mode
 https://shortmaster.vercel.app
-
-https://shortmaster.netlify.app
 ```
 
 _Redirect URLs_
 
 - URLs that auth providers are permitted to redirect to post authentication. Wildcards are allowed, for example
 ```
+development mode
 http://localhost:5173/dashboard
 
+production mode
 https://shortmaster.vercel.app/dashboard
-
-https://shortmaster.netlify.app/dashboard
 ```
-
 
 
 For further info please read [Social Login](https://supabase.com/docs/guides/auth/social-login) from Supabase documents.
@@ -450,7 +449,11 @@ On the other hand, if the environment variables are imported in server file then
 PUBLIC_SUPABASE_URL = "Your key"
 PUBLIC_SUPABASE_KEY = "Your key"
 
+# development mode
 PUBLIC_APP_BASE_URL = "http://localhost:5173"
+
+# production mode
+PUBLIC_APP_BASE_URL = "https://shortmaster1.vercel.app"
 
 OPENAI_KEY = "Your OpenAI key"
 
