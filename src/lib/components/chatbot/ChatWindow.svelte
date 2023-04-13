@@ -33,20 +33,20 @@
 
   const handleSubmit = async () => {
     if (!query) {
-      // toast.push("Prompt cannot be empty !", {
-      //   theme: {
-      //     "--toastBorderRadius": "8px",
-      //     "--toastBarBackground": "",
-      //     "--toastBackground": "#8AD8EF",
-      //     "--toastBtnWidth": "0",
-      //     "--toastBtnHeight": "0",
-      //     "--toastBtnContent": " ",
-      //     "--toastMsgPadding": "0.35rem 1rem",
-      //     "--toastMinHeight": "3.0rem",
-      //     "--toastColor": "black",
-      //     "--toastBtnFont": "14px",
-      //   },
-      // });
+      toast.push("Prompt cannot be empty !", {
+        theme: {
+          "--toastBorderRadius": "8px",
+          "--toastBarBackground": "",
+          "--toastBackground": "#8AD8EF",
+          "--toastBtnWidth": "0",
+          "--toastBtnHeight": "0",
+          "--toastBtnContent": " ",
+          "--toastMsgPadding": "0.35rem 1rem",
+          "--toastMinHeight": "3.0rem",
+          "--toastColor": "black",
+          "--toastBtnFont": "14px",
+        },
+      });
       return;
     }
 

@@ -12,20 +12,20 @@
   const handleCopy = () => {
     navigator.clipboard.writeText(`${PUBLIC_APP_BASE_URL}/${key}`);
 
-    //  toast.push("Copied to clipboard", {
-    //   theme: {
-    //     "--toastBorderRadius": "8px",
-    //     "--toastBarBackground": "",
-    //     "--toastBackground": "#3175D3",
-    //     "--toastBtnWidth": "0",
-    //     "--toastBtnHeight": "0",
-    //     "--toastBtnContent" : " ",
-    //     "--toastMsgPadding": "0.35rem 1rem",
-    //     "--toastMinHeight": "3.0rem",
-    //     "--toastWidth": "174px",
-    //     "--toastBtnFont": "14px"
-    //   }
-    // });
+     toast.push("Copied to clipboard", {
+      theme: {
+        "--toastBorderRadius": "8px",
+        "--toastBarBackground": "",
+        "--toastBackground": "#3175D3",
+        "--toastBtnWidth": "0",
+        "--toastBtnHeight": "0",
+        "--toastBtnContent" : " ",
+        "--toastMsgPadding": "0.35rem 1rem",
+        "--toastMinHeight": "3.0rem",
+        "--toastWidth": "174px",
+        "--toastBtnFont": "14px"
+      }
+    });
   };
 </script>
 
