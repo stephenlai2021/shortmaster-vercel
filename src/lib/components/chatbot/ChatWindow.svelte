@@ -182,7 +182,8 @@
         on:click={() => (popup = false)}
         on:keydown
       >
-        <span class="borde">{$t("common.save")}</span>
+        <!-- <span class="borde">{$t("common.")}</span> -->
+        <span class="borde">{$t("common.done")}</span>
       </button>
     </form>
   {:else}
