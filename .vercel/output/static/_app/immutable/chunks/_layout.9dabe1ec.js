@@ -1,1 +1,0 @@
-import{l,a as n}from"./translations.1a06fbbc.js";const s=async({url:a,locals:c})=>{const{pathname:o}=a,t="en",e=l.get()||t;return await n(e,o),{}},i=Object.freeze(Object.defineProperty({__proto__:null,load:s},Symbol.toStringTag,{value:"Module"}));export{i as _,s as l};
