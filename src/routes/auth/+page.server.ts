@@ -25,7 +25,7 @@ export const actions: Actions = {
         });
       }
 
-      const { error: err } = await locals.sb.auth.signInWithOAuth({
+      const { data, error: err } = await locals.sb.auth.signInWithOAuth({
         provider: provider,
       });
 
@@ -36,7 +36,7 @@ export const actions: Actions = {
         });
       }      
 
-      // throw redirect(303, data.url);
+      throw redirect(303, data.url);
     }
   },
 };
