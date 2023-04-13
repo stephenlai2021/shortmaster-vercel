@@ -10,7 +10,7 @@
     <img src={myAvatar} alt="" width="120" height="120" class="border rounded-full">
     <div class="name font-bol font-normal mt-2 text-[20px]">{$t('common.authorName')}</div>
     <div class="title text-[15px] mt-2">{$t('common.authorTitle')}</div>
-    <a href="https://github.com/stephenlai2021/quickshort" target="_blank">
+    <a href="https://github.com/stephenlai2021/quickshort" target="_blank" rel="noreferrer">
       <!-- <img src={githubIcon} alt="" width="24" height="24" class="mt-4 mb-2 cursor-pointer" on:click={() => goto('https://github.com/stephenlai2021')}> -->
       <img src={githubIcon} alt="" width="24" height="24" class="mt-4 mb-2 cursor-pointer">
     </a>
