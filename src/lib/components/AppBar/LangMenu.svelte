@@ -3,20 +3,24 @@
   import imageI18n from "$lib/assets/images/icons/lang.png"
   
   let currentMenu = "English";
-  const langs = ["English", "日本語", "繁體中文"];
+  const langs = ["English", "Español", "やまと", "繁體中文"];
 
   const handleLocale = (lang) => {
     if (lang === "English") {
       $locale = "en";
       currentMenu = "English";
     }
-    if (lang === "日本語") {
-      $locale = "ja";
-      currentMenu = "日本語";
-    }
+    if (lang === "Español") {
+      $locale = "es";
+      currentMenu = "Español";
+    }    
     if (lang === "繁體中文") {
       $locale = "zh-TW";
       currentMenu = "繁體中文";
+    }
+    if (lang === "日本語") {
+      $locale = "ja";
+      currentMenu = "日本語";
     }
   };
 </script>

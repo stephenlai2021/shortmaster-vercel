@@ -5,7 +5,8 @@ export const config = {
   i18n: {
     en: { lang },
     zhTW: { lang },
-    ja: { lang }
+    ja: { lang },
+    es: { lang },
   },
   loaders: [
     {
@@ -22,6 +23,11 @@ export const config = {
       locale: "ja",
       key: "common",
       loader: async () => (await import("./ja/common.json")).default,
+    },
+    {
+      locale: "es",
+      key: "common",
+      loader: async () => (await import("./es/common.json")).default,
     },
   ],
 };
