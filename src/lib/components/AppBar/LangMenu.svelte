@@ -18,9 +18,9 @@
       $locale = "zh-TW";
       currentMenu = "繁體中文";
     }
-    if (lang === "日本語") {
+    if (lang === "やまと") {
       $locale = "ja";
-      currentMenu = "日本語";
+      currentMenu = "やまと";
     }
   };
 </script>
