@@ -7,6 +7,9 @@
   import Section6 from "$lib/components/page-home/Section6.svelte"
   import Section7 from "$lib/components/page-home/Section7.svelte"
   import Section8 from "$lib/components/page-home/Section8.svelte"
+  import { page } from "$app/stores"
+
+  console.log('user | home:', $page.data.user)
 </script>
 
 <div class="wrapper mt-[70px] w-full">
