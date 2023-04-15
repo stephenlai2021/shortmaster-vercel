@@ -32,30 +32,12 @@
   }
 
   const handleSubmit = async () => {
-    if (!query || !$openaiKey) {
-      if (!query) {
-        toast.push("Prompt cannot be empty !", {
-          theme: {
-            "--toastBorderRadius": "8px",
-            "--toastBarBackground": "",
-            "--toastBackground": "#8AD8EF",
-            "--toastBtnWidth": "0",
-            "--toastBtnHeight": "0",
-            "--toastBtnContent": " ",
-            "--toastMsgPadding": "0.35rem 1rem",
-            "--toastMinHeight": "3.0rem",
-            "--toastColor": "black",
-            "--toastBtnFont": "14px",
-          },
-        });
-      }
-
-      if (!$openaiKey) {
-      toast.push("Openai API key is required !", {
+    if (!query) {
+      toast.push("Prompt cannot be empty !", {
         theme: {
           "--toastBorderRadius": "8px",
           "--toastBarBackground": "",
-          "--toastBackground": "#F9A21F",
+          "--toastBackground": "#8AD8EF",
           "--toastBtnWidth": "0",
           "--toastBtnHeight": "0",
           "--toastBtnContent": " ",
@@ -65,10 +47,46 @@
           "--toastBtnFont": "14px",
         },
       });
+      return
     }
-      return;
-    }     
-    
+
+    // if (!query || !$openaiKey) {
+    //   if (!query) {
+    //     toast.push("Prompt cannot be empty !", {
+    //       theme: {
+    //         "--toastBorderRadius": "8px",
+    //         "--toastBarBackground": "",
+    //         "--toastBackground": "#8AD8EF",
+    //         "--toastBtnWidth": "0",
+    //         "--toastBtnHeight": "0",
+    //         "--toastBtnContent": " ",
+    //         "--toastMsgPadding": "0.35rem 1rem",
+    //         "--toastMinHeight": "3.0rem",
+    //         "--toastColor": "black",
+    //         "--toastBtnFont": "14px",
+    //       },
+    //     });
+    //   }
+
+    //   if (!$openaiKey) {
+    //     toast.push("Openai API key is required !", {
+    //       theme: {
+    //         "--toastBorderRadius": "8px",
+    //         "--toastBarBackground": "",
+    //         "--toastBackground": "#F9A21F",
+    //         "--toastBtnWidth": "0",
+    //         "--toastBtnHeight": "0",
+    //         "--toastBtnContent": " ",
+    //         "--toastMsgPadding": "0.35rem 1rem",
+    //         "--toastMinHeight": "3.0rem",
+    //         "--toastColor": "black",
+    //         "--toastBtnFont": "14px",
+    //       },
+    //     });
+    //   }
+    //   return;
+    // }
+
     loading = true;
     chatMessages = [...chatMessages, { role: "user", content: query }];
 
@@ -78,7 +96,7 @@
       },
       payload: JSON.stringify({
         messages: chatMessages,
-        openaiKey: $openaiKey
+        openaiKey: $openaiKey,
       }),
     });
     query = "";
@@ -148,11 +166,11 @@
           "--toastBtnFont": "14px",
         },
       });
-      return
+      return;
     } else {
-      popup = false
+      popup = false;
     }
-  }
+  };
 
   $: console.log("openai key: ", $openaiKey);
 </script>
@@ -203,7 +221,6 @@
       {#if errMsg}
         <ChatMessage type="assistant" message={errMsg} />
       {/if}
-
     </div>
     <div class="" bind:this={scrollToDiv} />
   </div>
@@ -215,7 +232,7 @@
       <input
         type="text"
         class="w-[70%] border-none rounded-none outline-none bg-warnin text-blac"
-        placeholder={$t('common.placeholder')}
+        placeholder={$t("common.placeholder")}
         bind:value={$openaiKey}
       />
       <button
