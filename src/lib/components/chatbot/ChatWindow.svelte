@@ -33,7 +33,7 @@
 
   const handleSubmit = async () => {
     if (!$openaiKey) {
-      toast.push("This field cannot be empty !", {
+      toast.push("OpenAI API key is required !", {
         theme: {
           "--toastBorderRadius": "8px",
           "--toastBarBackground": "",
@@ -49,7 +49,7 @@
       });
       return;
     } 
-    
+
     if (!query) {
       toast.push("Prompt cannot be empty !", {
         theme: {
