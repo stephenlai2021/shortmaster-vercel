@@ -32,7 +32,7 @@
   }
 
   const handleSubmit = async () => {
-    if (!query && !$openaiKey) {
+    if (!query || !$openaiKey) {
       if (!query) {
         toast.push("Prompt cannot be empty !", {
           theme: {
