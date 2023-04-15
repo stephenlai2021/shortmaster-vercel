@@ -50,6 +50,24 @@
       return;
     }
 
+    if (!$openaiKey) {
+      toast.push("Oh, have you entered your Openai API key ?", {
+        theme: {
+          "--toastBorderRadius": "8px",
+          "--toastBarBackground": "",
+          "--toastBackground": "#F9A21F",
+          "--toastBtnWidth": "0",
+          "--toastBtnHeight": "0",
+          "--toastBtnContent": " ",
+          "--toastMsgPadding": "0.35rem 1rem",
+          "--toastMinHeight": "3.0rem",
+          "--toastColor": "black",
+          "--toastBtnFont": "14px",
+        },
+      });
+      return;
+    }
+
     loading = true;
     chatMessages = [...chatMessages, { role: "user", content: query }];
 
