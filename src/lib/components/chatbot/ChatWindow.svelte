@@ -48,9 +48,7 @@
         },
       });
       return;
-    }
-
-    if (!$openaiKey) {
+    } else if (!$openaiKey) {
       toast.push("Oh, have you entered your Openai API key ?", {
         theme: {
           "--toastBorderRadius": "8px",
