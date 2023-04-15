@@ -6,7 +6,7 @@ const OAUTH_PROVIDERS = ["google", "discord", "github"];
 
 export const load: PageServerLoad = ({ locals }) => {
   if (locals.session) {
-    throw redirect(303, "/dashboard");
+    throw redirect(303, "/dashbzoard");
   }
 
   return {

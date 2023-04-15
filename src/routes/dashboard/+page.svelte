@@ -2,20 +2,8 @@
   import LinkForm from "$lib/components/page-dashboard/LinkForm.svelte";
   import LinkCard from "$lib/components/page-dashboard/LinkCard.svelte";
   import { t } from "$lib/i18n/translations";
-  import { user, auth, linksArray } from "$lib/stores";
-  import { onMount } from "svelte";
-  import { supabaseClient } from "$lib/supabase";
+  import { linksArray } from "$lib/stores";
   import { page } from "$app/stores";
-  import type { PageData } from "./$types";
-  import { goto } from "$app/navigation";
-
-  // $: console.log('user | dashboard: ', $page.data.user?.user)
-
-  // onMount(() => {
-  //   if ($page.data?.links) {
-  //     $linksArray = $page.data.links
-  //   }
-  // })
 
   $: if ($page.data?.links) {
     $linksArray = $page.data.links;
@@ -29,7 +17,6 @@
   <LinkForm />
   <div class="links-wrapper my-10">
     {#each $linksArray as item}
-      <!-- {#each $page.data.links as item} -->
       <LinkCard link={item} />
     {/each}
   </div>

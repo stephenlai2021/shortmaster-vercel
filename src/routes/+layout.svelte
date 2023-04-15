@@ -21,8 +21,8 @@
   import { browser } from "$app/environment";
   import { fade } from "svelte/transition";
   import { SvelteToast } from "@zerodevx/svelte-toast";
-  import { page } from "$app/stores"
-  import Cookies from 'js-cookie'
+  import { page } from "$app/stores";
+  import Cookies from "js-cookie";
   import IconChatbot from "$lib/components/icon/IconChatbot.svelte";
   import MenuBar from "$lib/components/AppBar/MenuBar.svelte";
   import Icon from "$lib/assets/images/favicon.ico";
@@ -64,12 +64,30 @@
       subscription.unsubscribe();
     };
   });
-  
+
   $: if (browser) window.addEventListener("resize", () => handleRWD());
 </script>
 
 <svelte:head>
-  <title>ShortMaster</title>
+  <title>ShortMaster | URL Shortener with Analytics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Shorten, Simplify and Track your URLs like a Pro. Shorten your URLs with ShortMaster and get detailed analytics on clicks, country, and city."
+  />
+  <meta
+    property="og:title"
+    content="ShortMaster | URL Shortener with Analytics"
+  />
+  <meta property="og:site_name" content="ShortMaster" />
+  <meta property="og:type" content="website" />
+  <meta
+    property="og:description"
+    content="Shorten, Simplify and Track your URLs like a Pro. Shorten your URLs with ShortMaster and get detailed analytics on clicks, country, and city."
+  />
+  <meta property="og:image:alt" content="ShortMaster | URL Shortener with Analytics">
+  <meta property="twitter:title" content="ShortMaster | URL Shortener with Analytics">
+<meta property="twitter:description" content="Shorten, Simplify and Track your URLs like a Pro. Shorten your URLs with ShortMaster and get detailed analytics on clicks, country, and city.">
 </svelte:head>
 
 <SvelteToast />
@@ -85,15 +103,17 @@
     <div
       class="fixed bottom-[20px] right-[20px] cursor-pointer"
       on:keydown
-      on:click={() => $menuOpen = !$menuOpen}
+      on:click={() => ($menuOpen = !$menuOpen)}
       transition:fade
     >
       <IconChatbot width="50" />
     </div>
   {/if}
-  
+
   {#if $menuOpen && $btnChat}
-    <div class="fixed bottom-[80px] right-[10px] max-[400px]:top-0 max-[400px]:right-0 z-[51] max-[400px]:w-full max-[400px]:h-full max-[400px]:rounded-0">
+    <div
+      class="fixed bottom-[80px] right-[10px] max-[400px]:top-0 max-[400px]:right-0 z-[51] max-[400px]:w-full max-[400px]:h-full max-[400px]:rounded-0"
+    >
       <ChatWindow />
     </div>
   {/if}

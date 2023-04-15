@@ -11,7 +11,7 @@
 
   console.log('user | home:', $page.data.user)
 </script>
-
+zz
 <div class="wrapper mt-[70px] w-full">
   <Section1 />
   <Section2 />

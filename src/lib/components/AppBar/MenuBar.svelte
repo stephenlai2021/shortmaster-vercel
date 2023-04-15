@@ -20,21 +20,18 @@
           <LangMenu />
 
           {#if $page.url.pathname === "/" && !$page.data.user?.user.email}
-            <!-- class="mr-4 borde max-[530px]:hidden tooltip tooltip-bottom tooltip-neutral" -->
-            <a href="/auth" class="mr-4 borde max-[530px]:hidden">
-              <!-- data-tip={$t("common.login")} -->
+            <a href="/auth" class="mr-4 borde max-[530px]:hidden tooltip tooltip-bottom tooltip-neutral" data-tip={$t('common.login')}>
               <img src={imageLogin} width="24" alt="" />
             </a>
           {/if}
 
           {#if $page.data.user?.user.email && $page.url.pathname !== "/dashboard" && $page.url.pathname !== "/auth"}
             <li>
-              <!-- class="max-[530px]:hidden pl-0 mr-1  hover:bg-base-100 tooltip tooltip-bottom tooltip-neutral" -->
               <a
                 href="/dashboard"
-                class="max-[530px]:hidden pl-0 mr-1 hover:bg-base-100"
+                class="max-[530px]:hidden pl-0 mr-1 hover:bg-base-100 tooltip tooltip-bottom tooltip-neutral"
+                data-tip={$t('common.dashboard')}
               >
-                <!-- data-tip={$t("common.dashboard")} -->
                 <img src={imagePanel} width="24" alt="" />
               </a>
             </li>
