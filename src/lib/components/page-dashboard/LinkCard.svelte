@@ -46,21 +46,22 @@
       console.log("Get link error: ", getLinkErr.message);
 
     /* Step 2: Delete clicks whose link_id relates to key link id from clicks table */
-    const { data: deletedClicks, error: deletedClicksErr } = await supabaseClient
+    const { data: deletedClicks, error: deleteClicksErr } = await supabaseClient
       .from("url_shortener_clicks")
       .delete()
       .eq("link_id", link?.id);
 
     if (deletedClicks) console.log('Deleted clicks: ', deletedClicks)
 
-    if (deletedClicksErr)
-      console.log("Delete clicks error: ", deletedClicksErr.message);
+    if (deleteClicksErr)
+      console.log("Delete clicks error: ", deleteClicksErr.message);
 
     /* Step 3: Delete key link from links table*/
     const { data: deletedLink, error: deleteLinkErr } = await supabaseClient
       .from("url_shortener_links")
       .delete()
-      .eq("key", link?.key);
+      .eq("key", link?.key)
+      .single()
 
     if (deletedLink) console.log("Deleted link: ", deletedLink);
 
