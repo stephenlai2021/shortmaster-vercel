@@ -59,8 +59,8 @@
       )
       .openPopup();
 
-    url_shortener_clicks.forEach((loc) => {
-    // clickDetails.forEach((loc) => {
+    // url_shortener_clicks.forEach((loc) => {
+    clickDetails.forEach((loc) => {
       leaflet
         .marker([loc.latitude, loc.longitude], { icon: avatarIcon })
         .addTo(map)
@@ -109,8 +109,8 @@
   </div>
 
   <div class="mt-10">
-    {#each url_shortener_clicks as click}
-    <!-- {#each clickDetails as click} -->
+    <!-- {#each url_shortener_clicks as click} -->
+    {#each clickDetails as click}
       <div class="max-[410px]:rounded-none rounded-[0.75rem] p-[20px] max-[410px]:w-full border-none w-full mb-5 bg-neutral/20">
         <div class="flex justify-between max-[540px]:flex-col">
           <div class="div">
