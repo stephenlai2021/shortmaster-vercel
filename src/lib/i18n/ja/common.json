@@ -78,5 +78,9 @@
   "authorDescription": "フルスタックを中心に様々なWebアプリケーションを制作しており、Sveltekitで構築している",
   "contact": "連絡先",
   "copyright": "著作権 © 2023- 縮める. 無断転載禁止.",
-  "placeholder": "OpenAI API キーを入力します。"
+  "placeholder": "OpenAI API キーを入力します。",
+  "warningMsg1": "OpenAI APIキーが必要です！",
+  "warningMsg2": "プロンプトを空にすることはできません！",
+  "latitude": "ラチチュード",
+  "longitude": "経度"
 }

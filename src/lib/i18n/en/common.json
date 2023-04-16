@@ -29,7 +29,7 @@
   "long_url_placeholder": "Enter or paste long URL",
   "short_key": "Short Key",
   "short_key_placeholder": "Enter a key (optional)",
-  "shorten": "Shorten",  
+  "shorten": "Shorten",
   "btn-github": "Login with Github",
   "btn-google": "Login with Google",
   "btn-discord": "Login with Discord",
@@ -69,5 +69,7 @@
   "copyright": "Copyright © 2023- ShortMaster. All Rights Reserved.",
   "placeholder": "Enter your OpenAI API key",
   "warningMsg1": "OpenAI API key is required !",
-  "warningMsg2": "Prompt cannot be empty !"
+  "warningMsg2": "Prompt cannot be empty !",
+  "latitude": "latitude",
+  "longitude": "longitude"
 }

@@ -43,7 +43,7 @@
   "btn-notion": "Notion으로 로그인",
   "email": "이메일",
   "password": "비밀번호",
-  "login": "로그인", 
+  "login": "로그인",
   "logout": "로그아웃",
   "send": "보내기",
   "chat": "챗봇",
@@ -76,5 +76,7 @@
   "copyright": "저작권 © 2023- ShortMaster. 모든 권리 보유.",
   "placeholder": "OpenAI API 키를 입력하세요.",
   "warningMsg1": "OpenAI API 키가 필요합니다!",
-  "warningMsg2": "프롬프트는 비워둘 수 없습니다!"
+  "warningMsg2": "프롬프트는 비워둘 수 없습니다!",
+  "latitude": "위도",
+  "longitude": "경도"
 }

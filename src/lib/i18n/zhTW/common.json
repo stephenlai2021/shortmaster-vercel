@@ -78,6 +78,10 @@
   "authorDescription": "我創建各種網路應用，主要是全端開發，我使用 Sveltekit 構建。",
   "contact": "聯絡我",
   "copyright": "版權聲明 © 2023- 縮短專家. 保留所有權利。",
-  "placeholder": "輸入您的 OpenAI API 密鑰"
+  "placeholder": "輸入您的 OpenAI API 密鑰",
+  "warningMsg1": "需要OpenAI的API密鑰 !",
+  "warningMsg2": "提示不能為空 !",
+  "latitude": "緯度",
+  "longitude": "經度"
 }
 

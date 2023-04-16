@@ -78,5 +78,9 @@
   "authorDescription": "Creo varias aplicaciones web, principalmente fullstack, y construyo con Sveltekit",
   "contact": "contacto",
   "copyright": "Derechos de autor © 2023- CortaMaster. Todos los derechos reservados.",
-  "placeholder": "Introduzca su clave API de OpenAI"
+  "placeholder": "Introduzca su clave API de OpenAI",
+  "warningMsg1": "Se necesita la clave API de OpenAI.",
+  "warningMsg2": "La pregunta no puede estar vacía.",
+  "latitude": "latitud",
+  "longitude": "longitud"
 }

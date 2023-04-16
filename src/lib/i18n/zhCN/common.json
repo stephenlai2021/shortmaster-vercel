@@ -69,6 +69,8 @@
   "copyright": "版权声明 © 2023- 縮短專家. 版权所有。",
   "placeholder": "输入您的OpenAI API密钥",
   "warningMsg1": "需要OpenAI的API密钥 !",
-  "warningMsg2": "提示不能为空 !"
+  "warningMsg2": "提示不能为空 !",
+  "latitude": "纬度",
+  "longitude": "经度"
 }
 
