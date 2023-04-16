@@ -3,7 +3,7 @@
   import imageI18n from "$lib/assets/images/icons/lang.png"
   
   let currentMenu = "English";
-  const langs = ["English", "Español", "やまと", "한국어", "中文"];
+  const langs = ["English", "Español", "やまと", "한국어", "簡體中文", "繁體中文"];
 
   const handleLocale = (lang) => {
     if (lang === "English") {
@@ -14,9 +14,13 @@
       $locale = "es";
       currentMenu = "Español";
     }    
-    if (lang === "中文") {
+    if (lang === "繁體中文") {
       $locale = "zh-TW";
-      currentMenu = "中文";
+      currentMenu = "繁體中文";
+    }
+    if (lang === "簡體中文") {
+      $locale = "zh-CN";
+      currentMenu = "簡體中文";
     }
     if (lang === "やまと") {
       $locale = "ja";
