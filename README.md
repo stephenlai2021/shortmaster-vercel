@@ -55,7 +55,7 @@ One thing to mention is that designing an appealing, good-looking user interface
 
 **Theme Switcher**
 
-Users are able to select favorite theme, it applies to the entire application, the selected theme is remembered by the application and is stored in cookie, so when page is refreshed users won't see the flicker, it provies great user experiences thanks to `Sveltekit` powerful server side rendering mechanism. - [Huntabyte/Youtube](https://www.youtube.com/watch?v=3GpZkVBjXfE)
+Users are able to select favorite theme, it applies to the entire application, the selected theme is remembered by the application and is stored in cookie, so when page is refreshed users won't see the flicker, it provies great user experiences thanks to `Sveltekit` powerful server side rendering mechanism. - [Huntabyte](https://www.youtube.com/watch?v=3GpZkVBjXfE)
 
 <img height="400" src="https://shortmaster1.vercel.app/I5W0gv">
 
