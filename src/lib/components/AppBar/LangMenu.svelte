@@ -23,7 +23,7 @@
       currentMenu = "やまと";
     }
     if (lang === "한국어") {
-      $locale = "ja";
+      $locale = "ko";
       currentMenu = "한국어";
     }
   };
