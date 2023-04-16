@@ -33,7 +33,8 @@
 
   const handleSubmit = async () => {
     if (!$openaiKey) {
-      toast.push("OpenAI API key is required !", {
+      // toast.push("OpenAI API key is required !", {
+      toast.push(`${$t('common.warningMsg1')}`, {
         theme: {
           "--toastBorderRadius": "8px",
           "--toastBarBackground": "",
@@ -51,7 +52,8 @@
     } 
 
     if (!query) {
-      toast.push("Prompt cannot be empty !", {
+      // toast.push("Prompt cannot be empty !", {
+      toast.push(`${$t('common.warningMsg2')}`, {
         theme: {
           "--toastBorderRadius": "8px",
           "--toastBarBackground": "",
@@ -133,7 +135,8 @@
 
   const saveApikey = () => {
     if (!$openaiKey) {
-      toast.push("This field cannot be empty !", {
+      // toast.push("This field cannot be empty !", {
+      toast.push(`${$t('common.warningMsg1')}`, {
         theme: {
           "--toastBorderRadius": "8px",
           "--toastBarBackground": "",

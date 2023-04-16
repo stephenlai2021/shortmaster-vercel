@@ -20,6 +20,11 @@ export const config = {
       loader: async () => (await import("./zhTW/common.json")).default,
     },
     {
+      locale: "zh-CN",
+      key: "common",
+      loader: async () => (await import("./zhCN/common.json")).default,
+    },
+    {
       locale: "ja",
       key: "common",
       loader: async () => (await import("./ja/common.json")).default,

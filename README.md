@@ -18,7 +18,7 @@ One thing to mention is that designing an appealing, good-looking user interface
 
 2. User will be brought to dashboard page after login.
 
-3. There is a form on the top where user enter a long url, clicking the shorten button, the system then designates a randomly generated six figures (short key) automatically and update the info with a card
+3. There is a form on top where user enter a long url, clicking the shorten button, the system then designates a randomly generated six figures (short key) automatically and update the info with a card
 
 <img height="400" src="https://itzgmdgndusfvggjclwk.supabase.co/storage/v1/object/public/general/dashboard.png" />
 

@@ -78,5 +78,7 @@
   "authorDescription": "I create various web applications, mainly fullstack, and I build with Sveltekit",
   "contact": "contact me",
   "copyright": "Copyright © 2023- ShortMaster. All Rights Reserved.",
-  "placeholder": "Enter your OpenAI API key"
+  "placeholder": "Enter your OpenAI API key",
+  "warningMsg1": "OpenAI API key is required !",
+  "warningMsg2": "Prompt cannot be empty !"
 }
