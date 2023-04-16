@@ -40,6 +40,7 @@
       .eq("key", key)
       .single()
 
+    if (linkKey) console.log('key: ', linkKey)
     if (linkKey) console.log('key: ', linkKey?.key)
 
     if (getLinkKeyErr)
