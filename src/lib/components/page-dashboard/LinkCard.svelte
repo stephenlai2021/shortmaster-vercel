@@ -40,10 +40,10 @@
       .eq("key", key)
       .single()
 
-    if (link) console.log('link: ', link)
+    if (link) console.log('1. link: ', link)
 
     if (getLinkErr)
-      console.log("Get link error: ", getLinkErr.message);
+      console.log("1. Get link error: ", getLinkErr.message);
 
     /* Step 2: Delete clicks whose link_id relates to key link id from clicks table */
     const { data: deletedClicks, error: deleteClicksErr } = await supabaseClient
@@ -51,10 +51,10 @@
       .delete()
       .eq("link_id", link?.id);
 
-    if (deletedClicks) console.log('Deleted clicks: ', deletedClicks)
+    if (deletedClicks) console.log('2. Deleted clicks: ', deletedClicks)
 
     if (deleteClicksErr)
-      console.log("Delete clicks error: ", deleteClicksErr.message);
+      console.log("2. Delete clicks error: ", deleteClicksErr.message);
 
     /* Step 3: Delete key link from links table*/
     const { data: deletedLink, error: deleteLinkErr } = await supabaseClient
@@ -63,9 +63,9 @@
       .eq("key", link?.key)
       .single()
 
-    if (deletedLink) console.log("Deleted link: ", deletedLink);
+    if (deletedLink) console.log("3. Deleted link: ", deletedLink);
 
-    if (deleteLinkErr) console.log("Delete link error: ", deleteLinkErr.message);
+    if (deleteLinkErr) console.log("3. Delete link error: ", deleteLinkErr.message);
 
     $linksArray = $linksArray.filter((link) => link.key !== key);
     // $linksArray = $linksArray.filter((link) => link.key !== linkKey?.key);
