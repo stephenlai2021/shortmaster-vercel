@@ -55,7 +55,6 @@
       .marker([51.505, -0.09], { icon: centerIcon })
       .addTo(map)
       .bindPopup(
-        // "<h1>ShortMaster</h1><span>latitude: 51.505</span><br/><span>longitude: -0.09</span>"
         `<h1>${$t('common.logo')}</h1><span>${$t('common.latitude')}: 51.505</span><br/><span>${$t('common.longitude')}: -0.09</span>`
       )
       .openPopup();
@@ -66,8 +65,7 @@
         .marker([loc.latitude, loc.longitude], { icon: avatarIcon })
         .addTo(map)
         .bindPopup(
-          // `<span>IP: ${loc.ip}</span><br/><span>latitude: ${loc.latitude}</span><br/><span>longitude: ${loc.longitude}</span>`
-          `<span>IP: ${loc.ip}</span><br/><span>${$t('common.latitude')}: ${loc.latitude}</span><br/><span>${$t('common.longitude')}: ${loc.longitude}</span>`
+          `<span>IP: ${loc.ip}</span><br/><span>${$t('common.latitude')}: ${loc.latitude}</span><br/><span>${$t('common.longiitude')}: ${loc.longitude}</span>`
         )
         .openPopup();
     });
