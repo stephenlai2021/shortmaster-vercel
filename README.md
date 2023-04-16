@@ -36,7 +36,7 @@ One thing to mention is that designing an appealing, good-looking user interface
 ### Live Demo
 
 <!-- - [ShortMaster on Netlify](https://shortmaster.netlify.app) -->
-- [ShortMaster on Vercel](https://shortmaster1.vercel.app)
+- [ShortMaster on Vercel](https://shortmaster2.vercel.app)
 
 <!-- The app is working perfectly on Vercel all the time at the beginning but somehow it is not working anymore due to "Serverless Function crash" and I cannot get it fixed therefore I take alternative approach that is to deploy the project on `Netlify` to make it work properly. -->
 
@@ -57,14 +57,14 @@ One thing to mention is that designing an appealing, good-looking user interface
 
 Users are able to select favorite theme, it applies to the entire application, the selected theme is remembered by the application and is stored in cookie, so when page is refreshed users won't see the flicker, it provies great user experiences thanks to `Sveltekit` powerful server side rendering mechanism. - [Huntabyte](https://www.youtube.com/watch?v=3GpZkVBjXfE)
 
-<img height="400" src="https://shortmaster1.vercel.app/I5W0gv">
+<img height="400" src="https://shortmaster2.vercel.app/I5W0gv">
 
 **Internationalization**
 
 Multiple languages supports is essential for a successful web application, being able to serve people around the world is the key to success, therefore, adding `i18n` to the app is crucial. A `sveltekit-i18n` package is leveraged to make this feature come true. - [sveltekit-i18n](https://www.npmjs.com/package/sveltekit-i18n)
 
 
-<img height="200" src="https://shortmaster1.vercel.app/cMRCJb">
+<img height="200" src="https://shortmaster2.vercel.app/cMRCJb">
 
 
 **User account**
@@ -80,7 +80,7 @@ The advent of `chatGPT` has becoming a phenomonal, it takes chabot to another le
 
 <!-- , all the conversation is stored so that you don't need to restart the conversation all over again once the chat window is closed. -->
 
-<img height="400" src="https://shortmaster1.vercel.app/xICP5o">
+<img height="400" src="https://shortmaster2.vercel.app/xICP5o">
 
 **Tracking Capability**
 
@@ -449,7 +449,7 @@ PUBLIC_SUPABASE_KEY = "Your key"
 PUBLIC_APP_BASE_URL = "http://localhost:5173"
 
 # production mode
-PUBLIC_APP_BASE_URL = "https://shortmaster1.vercel.app"
+PUBLIC_APP_BASE_URL = "https://shortmaster2.vercel.app"
 
 OPENAI_KEY = "Your OpenAI key"
 
