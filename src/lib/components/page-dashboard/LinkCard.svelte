@@ -34,37 +34,40 @@
     alert(`Are you sure to delete key "${key}" ?`);
 
     /* Step 1: Get key link id from links table */
-    const { data: linkKey, error: getLinkKeyErr } = await supabaseClient
+    const { data: link, error: getLinkErr } = await supabaseClient
       .from("url_shortener_links")
       .select("*")
       .eq("key", key)
       .single()
 
-    if (linkKey) console.log('key: ', linkKey)
-    if (linkKey) console.log('key: ', linkKey?.key)
+    if (link) console.log('link: ', link)
 
-    if (getLinkKeyErr)
-      console.log("Getting key error: ", getLinkKeyErr.message);
+    if (getLinkErr)
+      console.log("Get link error: ", getLinkErr.message);
 
     /* Step 2: Delete clicks whose link_id relates to key link id from clicks table */
-    const { data: deletClicks, error: deleteClicksErr } = await supabaseClient
+    const { data: deletedClicks, error: deletedClicksErr } = await supabaseClient
       .from("url_shortener_clicks")
       .delete()
-      .eq("link_id", linkKey?.id);
+      .eq("link_id", link?.id);
 
-    if (deleteClicksErr)
-      console.log("Delete clicks error: ", deleteClicksErr.message);
+    if (deletedClicks) console.log('Deleted clicks: ', deletedClicks)
+
+    if (deletedClicksErr)
+      console.log("Delete clicks error: ", deletedClicksErr.message);
 
     /* Step 3: Delete key link from links table*/
-    const { data: deletedKey, error: deletedKeyErr } = await supabaseClient
+    const { data: deletedLink, error: deleteLinkErr } = await supabaseClient
       .from("url_shortener_links")
       .delete()
-      .eq("key", linkKey?.key);
+      .eq("key", link?.key);
 
-    if (deletedKeyErr) console.log("Delete key error: ", deletedKeyErr.message);
+    if (deletedLink) console.log("Deleted link: ", deletedLink);
 
-    // $linksArray = $linksArray.filter((link) => link.key !== key);
-    $linksArray = $linksArray.filter((link) => link.key !== linkKey?.key);
+    if (deleteLinkErr) console.log("Delete link error: ", deleteLinkErr.message);
+
+    $linksArray = $linksArray.filter((link) => link.key !== key);
+    // $linksArray = $linksArray.filter((link) => link.key !== linkKey?.key);
   };
 </script>
 
