@@ -33,23 +33,32 @@
   const handleDelete = async (key) => {
     alert(`Are you sure to delete key "${key}" ?`);
 
+    /* Step 1: Get key link id from links table */
     const { data: linkKey, error: getLinkKeyErr } = await supabaseClient
       .from("url_shortener_links")
-      .select('*')
-      .eq("key", key)
+      .select("*")
+      .eq("key", key);
+
+    if (linkKey) console.log('key: ', linkKey?.key)
+
     if (getLinkKeyErr)
       console.log("Getting key error: ", getLinkKeyErr.message);
 
+    /* Step 2: Delete clicks whose link_id relates to key link id from clicks table */
     const { data: deletClicks, error: deleteClicksErr } = await supabaseClient
       .from("url_shortener_clicks")
       .delete()
       .eq("link_id", linkKey?.id);
-    if (deleteClicksErr) console.log("Delete clicks error: ", deleteClicksErr.message);
 
+    if (deleteClicksErr)
+      console.log("Delete clicks error: ", deleteClicksErr.message);
+
+    /* Step 3: Delete key link from links table*/
     const { data: deletedKey, error: deletedKeyErr } = await supabaseClient
       .from("url_shortener_links")
       .delete()
-      .eq("key", linkKey?.key)
+      .eq("key", linkKey?.key);
+
     if (deletedKeyErr) console.log("Delete key error: ", deletedKeyErr.message);
 
     // $linksArray = $linksArray.filter((link) => link.key !== key);
