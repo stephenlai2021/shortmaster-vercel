@@ -1,7 +1,6 @@
 {
   "logo": "ShortMaster",
   "logo_long": "ShortMaster",
-  "logo_short": "QS",
   "chatbot_description": "chatbot powered by chatGPT",
   "chatbot_initial_prompt": "Hello, folks, please click the chatgpt icon down below and enter your OpenAI API key to start conversation with chatGPT 🙏, the api key is stored in local storage so there is no need to worry about being misused 😉",
   "title": "Shorten Your URLs Easily.",
@@ -45,9 +44,6 @@
   "email": "Email",
   "password": "Password",
   "login": "Login",
-  "login-hint": "Don't have an account? Register",
-  "register": "Register",
-  "register-hint": "Already have an account? Login",
   "logout": "Logout",
   "send": "SEND",
   "chat": "Chatbot",

@@ -34,6 +34,11 @@ export const config = {
       key: "common",
       loader: async () => (await import("./es/common.json")).default,
     },
+    {
+      locale: "ko",
+      key: "common",
+      loader: async () => (await import("./ko/common.json")).default,
+    },
   ],
 };
 
