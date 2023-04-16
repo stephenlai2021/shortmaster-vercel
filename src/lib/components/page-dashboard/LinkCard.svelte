@@ -37,7 +37,8 @@
     const { data: linkKey, error: getLinkKeyErr } = await supabaseClient
       .from("url_shortener_links")
       .select("*")
-      .eq("key", key);
+      .eq("key", key)
+      .single()
 
     if (linkKey) console.log('key: ', linkKey?.key)
 
