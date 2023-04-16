@@ -11,18 +11,18 @@
 
   // console.log('$page.data: ', $page.data)
 
-  const { link, clickDetails } = $page.data;
-  const { key, long_url, created_at, total_clicks, url_shortener_clicks } =
-  link;
-  console.log('link: ', link)
-  console.log('clickDetails: ', clickDetails)
-
-  // const { clickDetails } = $page.data;
+  // const { link, clickDetails } = $page.data;
   // const { key, long_url, created_at, total_clicks, url_shortener_clicks } =
-  // clickDetails;
-  // console.log(`click detatils | ${$page.params.id}: `, clickDetails)
-  // console.log(`path: `, $page.url.pathname)
-  // console.log(`host: `, $page.url.host)
+  // link;
+  // console.log('link: ', link)
+  // console.log('clickDetails: ', clickDetails)
+
+  const { clickDetails } = $page.data;
+  const { key, long_url, created_at, total_clicks, url_shortener_clicks } =
+  clickDetails;
+  console.log(`click detatils | ${$page.params.id}: `, clickDetails)
+  console.log(`path: `, $page.url.pathname)
+  console.log(`host: `, $page.url.host)
 
   let mapElement;
   let map;
@@ -56,18 +56,16 @@
       .addTo(map)
       .bindPopup(
         `<h1>${$t('common.logo')}</h1><span>${$t('common.latitude')}: 51.505</span><br/><span>${$t('common.longitude')}: -0.09</span>`
-        // `<span>51.505</span><br/><span>-0.09</span>`
       )
       .openPopup();
 
-    // url_shortener_clicks.forEach((loc) => {
-    clickDetails.forEach((loc) => {
+    url_shortener_clicks.forEach((loc) => {
+    // clickDetails.forEach((loc) => {
       leaflet
         .marker([loc.latitude, loc.longitude], { icon: avatarIcon })
         .addTo(map)
         .bindPopup(
           `<span>IP: ${loc.ip}</span><br/><span>${$t('common.latitude')}: ${loc.latitude}</span><br/><span>${$t('common.longitude')}: ${loc.longitude}</span>`
-          // `<span>${loc.ip}</span><br/><span>${loc.latitude}</span><br/><span>${loc.longitude}</span>`
         )
         .openPopup();
     });
@@ -111,8 +109,8 @@
   </div>
 
   <div class="mt-10">
-    <!-- {#each url_shortener_clicks as click} -->
-    {#each clickDetails as click}
+    {#each url_shortener_clicks as click}
+    <!-- {#each clickDetails as click} -->
       <div class="max-[410px]:rounded-none rounded-[0.75rem] p-[20px] max-[410px]:w-full border-none w-full mb-5 bg-neutral/20">
         <div class="flex justify-between max-[540px]:flex-col">
           <div class="div">
