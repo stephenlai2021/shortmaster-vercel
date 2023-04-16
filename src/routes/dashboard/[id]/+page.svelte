@@ -65,7 +65,7 @@
         .marker([loc.latitude, loc.longitude], { icon: avatarIcon })
         .addTo(map)
         .bindPopup(
-          `<span>IP: ${loc.ip}</span><br/><span>${$t('common.latitude')}: ${loc.latitude}</span><br/><span>${$t('common.longiitude')}: ${loc.longitude}</span>`
+          `<span>IP: ${loc.ip}</span><br/><span>${$t('common.latitude')}: ${loc.latitude}</span><br/><span>${$t('common.longitude')}: ${loc.longitude}</span>`
         )
         .openPopup();
     });
