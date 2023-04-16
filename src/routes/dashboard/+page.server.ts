@@ -10,7 +10,6 @@ export const load: PageServerLoad = async ({ locals }) => {
   const { data, error } = await supabaseClient
     .from("url_shortener_links")
     .select("*")
-    // .order('created_at', { ascending: false })
     .order('total_clicks', { ascending: false })
     .eq("user_id", locals.session?.user.email)
   

@@ -33,24 +33,27 @@
   const handleDelete = async (key) => {
     alert(`Are you sure to delete key "${key}" ?`);
 
-    const { data: link, error: linkErr } = await supabaseClient
+    const { data: linkKey, error: getLinkKeyErr } = await supabaseClient
       .from("url_shortener_links")
-      .delete()
-      .eq("key", key);
+      .select('*')
+      .eq("key", key)
+    if (getLinkKeyErr)
+      console.log("Getting key error: ", getLinkKeyErr.message);
 
-    // console.log('deleted key: ', link?.key)
-    if (linkErr)
-      console.log("error message from links table: ", linkErr.message);
-
-    const { data: click, error: clickErr } = await supabaseClient
+    const { data: deletClicks, error: deleteClicksErr } = await supabaseClient
       .from("url_shortener_clicks")
       .delete()
-      .eq("link_id", link?.id);
+      .eq("link_id", linkKey?.id);
+    if (deleteClicksErr) console.log("Delete clicks error: ", deleteClicksErr.message);
 
-    // console.log("deleted click: ", click);
-    if (clickErr) console.log("error message from clicks table: ", clickErr.message);
+    const { data: deletedKey, error: deletedKeyErr } = await supabaseClient
+      .from("url_shortener_links")
+      .delete()
+      .eq("key", linkKey?.key)
+    if (deletedKeyErr) console.log("Delete key error: ", deletedKeyErr.message);
 
-    $linksArray = $linksArray.filter((link) => link.key !== key);
+    // $linksArray = $linksArray.filter((link) => link.key !== key);
+    $linksArray = $linksArray.filter((link) => link.key !== linkKey?.key);
   };
 </script>
 
@@ -102,10 +105,10 @@
       <CopyBtn key={link.key} />
     </div>
 
-    <!-- <div class="borde flex items-center">
+    <div class="borde flex items-center">
       <button on:click={() => handleDelete(link.key)}>
         <IconTrashcan width="18" />
       </button>
-    </div> -->
+    </div>
   </div>
 </div>
