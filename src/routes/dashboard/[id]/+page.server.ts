@@ -19,6 +19,7 @@ export const load: PageServerLoad = async ({ params, locals }) => {
   const { data: clickDetails, error: clickErr } = await supabaseClient
     .from("url_shortener_clicks")
     .select("*")
+    .order("created_at", { ascending: false })
     .eq("link_id", link?.id);
   console.log("clicks: ", clickDetails);
 
